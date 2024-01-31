@@ -3,9 +3,10 @@ module_name = 'ColinData.py'
 class ColinData():
     def __init__(self):
         self.params =  {'PI_NAME':'BENJI',
-                        'ThisPi':'BENJI_V01',
+                        'PICO_NAME':'PICOR',
+                        'ThisPi':'BENJI_V02',
                         'ColObjects':'ColObjects_Pi_V15',
-                        'CommandStream':'CommandStreamPi_v04',
+                        'CommandStream':'CommandStreamPi_v05',
                         'GPIO':'GPIO_Pi_v46',
                         'AX12Servo':'AX12Servo_Pi_V01',
                         #  To obtain the AX12 port name use:    ls /dev/serial/by-id

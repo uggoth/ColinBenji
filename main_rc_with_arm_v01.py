@@ -12,15 +12,18 @@ ThisPi = SourceFileLoader('ThisPi', '/home/pi/ColinThisPi/' + ThisPiVersion + '.
 CommandStream = ThisPi.CommandStream
 AX12Servo = ThisPi.AX12Servo
 ColObjects = ThisPi.ColObjects
+pico_name = data_values['PICO_NAME']
 import time
 import pigpio
 
 gpio = pigpio.pi()
 handshake = CommandStream.Handshake(4, gpio)
 #handshake = None
-pico_id = 'PICOA'
-my_pico = CommandStream.Pico(pico_id, gpio, handshake)
-print ('my_pico:', my_pico)
+my_pico = CommandStream.Pico(pico_name, gpio, handshake)
+if my_pico.name != pico_name:
+    print ('**** Expected Pico:', pico_name, 'Got:', my_pico.name,'****')
+else:
+    print ('Connected to Pico OK')
 zombie_arm = ThisPi.ZombieArm()
 
 base_servo = zombie_arm.base_servo

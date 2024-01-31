@@ -54,10 +54,12 @@ number_length = 4
 delay = 0.1
 serial_no = 0
 servo_speed = 90
-interval = 10
+print_interval = 1000
 i = 0
 exiting = False
 finished = False
+
+print ('Main Loop')
 
 while not finished:
     i += 1
@@ -81,7 +83,7 @@ while not finished:
                     start = number_length * j
                     end = start + number_length
                     joysticks[j] = int(data[start:end])
-                if i % interval == 0:
+                if i % print_interval == 0:
                     print (joysticks)
                 knob_value = joysticks[5]
                 base_target = base_interpolator.interpolate(knob_value)
