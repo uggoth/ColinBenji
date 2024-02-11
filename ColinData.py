@@ -6,7 +6,7 @@ class ColinData():
                         'PICO_NAME':'PICOR',
                         'ThisPi':'BENJI_V02',
                         'ColObjects':'ColObjects_Pi_V15',
-                        'CommandStream':'CommandStreamPi_v05',
+                        'CommandStream':'CommandStreamPi_v06',
                         'GPIO':'GPIO_Pi_v46',
                         'AX12Servo':'AX12Servo_Pi_V01',
                         #  To obtain the AX12 port name use:    ls /dev/serial/by-id
